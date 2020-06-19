@@ -17,7 +17,6 @@ var should = require('should'),
   Flavor = require('../../../lib/pkgcloud/core/compute/flavor').Flavor,
   Image = require('../../../lib/pkgcloud/core/compute/image').Image,
   Server = require('../../../lib/pkgcloud/core/compute/server').Server,
-  azureApi = require('../../../lib/pkgcloud/azure/utils/azureApi'),
   pkgcloud = require('../../../lib/pkgcloud'),
   mock = !!process.env.MOCK;
 
@@ -25,8 +24,6 @@ var azureOptions = require('../../fixtures/azure/azure-options.json');
 
 // Declaring variables for helper functions defined later
 var setupVersionMock, setupFlavorMock, setupImagesMock, setupServerMock, setupDestroyMock;
-
-azureApi._updateMinimumPollInterval(mock ? 10 : azureApi.MINIMUM_POLL_INTERVAL);
 
 providers.filter(function (provider) {
   return !!helpers.pkgcloud.providers[provider].compute;
