@@ -1,5 +1,5 @@
 {
-  "name": "pkgcloud",
+  "name": "@dpdgroupuk/pkgcloud",
   "description": "Forked from http://github.com/pkgcloud/pkgcloud",
   "version": "3.0.0",
   "author": "Charlie Robbins <charlie.robbins@gmail.com>",
@@ -63,6 +63,9 @@
     "lint": "jshint --exclude-path .gitignore .",
     "posttest": "npm run lint"
   },
+  "files": [
+    "lib"
+  ],
   "engines": {
     "node": ">= 8.0.0"
   },
